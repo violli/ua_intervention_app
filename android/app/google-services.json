@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "734257869021",
+    "project_id": "uaintervention-c4c2f",
+    "storage_bucket": "uaintervention-c4c2f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734257869021:android:f5431c851a1b5f5007eb34",
+        "android_client_info": {
+          "package_name": "com.example.ua_intervention_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF0U8NLjilTotw5mXiu-qHc1XuxL-hUK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
