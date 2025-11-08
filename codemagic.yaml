@@ -23,3 +23,28 @@ workflows:
         key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
         issuer_id: $APP_STORE_CONNECT_ISSUER_ID
         submit_to_testflight: true
+workflows:
+  ios-release:
+    name: iOS Release Build
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        APP_STORE_CONNECT_KEY_IDENTIFIER: 29KMW65N27
+        APP_STORE_CONNECT_ISSUER_ID: 57056b4a-c363-4778-a791-d96f048f71ca
+    ios_signing:
+      distribution_type: app_store
+      bundle_identifier: com.example.uaInterventionApp
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Build iOS release
+        script: flutter build ipa --release
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_testflight: true
