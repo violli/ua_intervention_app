@@ -8,18 +8,19 @@ workflows:
       vars:
         APP_STORE_CONNECT_KEY_IDENTIFIER: 29KMW65N27
         APP_STORE_CONNECT_ISSUER_ID: 57056b4a-c363-4778-a791-d96f048f71ca
+        APP_STORE_CONNECT_KEY_PATH: ./AuthKey_29KMW65N27.p8
     ios_signing:
       distribution_type: app_store
-      bundle_identifier: com.example.uaInterventionApp
     scripts:
       - name: Get Flutter packages
         script: flutter pub get
       - name: Build iOS release
-        script: flutter build ipa --release
+        script: flutter build ipa --release --no-codesign
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
       app_store_connect:
+        api_key: $APP_STORE_CONNECT_KEY_PATH
         key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
         issuer_id: $APP_STORE_CONNECT_ISSUER_ID
         submit_to_testflight: true
