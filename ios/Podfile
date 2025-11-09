@@ -13,8 +13,9 @@ project 'Runner', {
   'Release' => :release,
 }
 
-# The Flutter Pod helper is located inside the Flutter SDK
-flutter_root = File.expand_path(`flutter --sdk-path`.strip)
+# Find the Flutter SDK path automatically
+flutter_root = `flutter --version --machine`.match(/"flutterRoot":\s*"([^"]+)"/)[1]
+
 load File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
 
 flutter_ios_podfile_setup
