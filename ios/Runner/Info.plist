@@ -45,5 +45,13 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Цей додаток може використовувати камеру для сканування QR-кодів.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Цей додаток може використовувати мікрофон під час запису або зйомки відео.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Цей додаток може використовувати бібліотеку фото для вибору або завантаження зображень.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Цей додаток може використовувати ідентифікатор пристрою для надсилання push-повідомлень.</string>
 </dict>
 </plist>
