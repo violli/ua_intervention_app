@@ -51,7 +51,5 @@
 	<string>Цей додаток може використовувати мікрофон під час запису або зйомки відео.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Цей додаток може використовувати бібліотеку фото для вибору або завантаження зображень.</string>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>Цей додаток може використовувати ідентифікатор пристрою для надсилання push-повідомлень.</string>
 </dict>
 </plist>
